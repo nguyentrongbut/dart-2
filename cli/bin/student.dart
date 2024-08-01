@@ -50,7 +50,7 @@ void addStudent(List<Student> students) {
     return;
   }
 
-  if (!isNumeric(name)) {
+  if (!isAlphabet(name)) {
     print('Name không được chứa số');
     return;
   }
@@ -78,7 +78,7 @@ void displayStudent(List<Student> students) {
   }
 }
 
-bool isNumeric(String str) {
-  RegExp _numeric = RegExp(r'^-?[0-9]+$');
-  return _numeric.hasMatch(str);
+bool isAlphabet(String str) {
+  RegExp alphabet = RegExp(r'^[A-Za-z]+$');
+  return alphabet.hasMatch(str);
 }
